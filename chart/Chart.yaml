@@ -26,3 +26,12 @@ maintainers:
 - name: Sheng Yang
   email: sheng@yasker.org
 icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/longhorn/icon/color/longhorn-icon-color.svg?sanitize=true
+dependencies:
+  - name: iscsi-install
+    version: 0.1.0
+    repository: file://charts/iscsi-install
+    condition: iscsi-install.enabled
+  - name: nfs-install
+    version: 0.1.0
+    repository: file://charts/nfs-install
+    condition: nfs-install.enabled
